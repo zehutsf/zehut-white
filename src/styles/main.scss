@@ -1,170 +1,170 @@
 @import "node_modules/reset-css/_reset";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 $break-point: "only screen and (max-width: 700px)";
 
 html {
-	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 16px;
-	font-weight: 300;
-	background-color: #fff;
-	color: #404040;
-	line-height: 1.3;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: #fff;
+  color: #404040;
+  line-height: 1.3;
 }
 
 .container {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .section {
-	float: left;
-	width: 50%;
-	height: 100%;
-	display: block;
-	position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: block;
+  position: relative;
 
-	@media #{$break-point} {
-		float: none;
-		display: block;
-		width: 100%;
-		height: auto;
-	}
+  @media #{$break-point} {
+    float: none;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .section--header {
-	background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 
-	@media #{$break-point} {
-		height: 300px;
-	}
+  @media #{$break-point} {
+    height: 300px;
+  }
 }
 
 .section-outer {
-	display: table;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-	@media #{$break-point} {
-		position: relative;
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
+  @media #{$break-point} {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .section-inner {
-	display: table-cell;
-	vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 
-	@media #{$break-point} {
-		display: block;
-	}
+  @media #{$break-point} {
+    display: block;
+  }
 }
 
 .section-content {
-	padding: 0px 40px;
-	text-align: center;
-	max-width: 400px;
-	margin: 0 auto;
+  padding: 0px 40px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .logo-outer {
-	width: 100%;
-	max-width: 300px;
-	margin: 0 auto;
-	display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
 
-	@media #{$break-point} {
-		width: auto;
-		height: 100%;
-		padding: 40px;
-	}
+  @media #{$break-point} {
+    width: auto;
+    height: 100%;
+    padding: 40px;
+  }
 }
 
 .section--info .section-content {
-	@media #{$break-point} {
-		padding: 40px;
-	}
+  @media #{$break-point} {
+    padding: 40px;
+  }
 }
 
 .logo-inner {
-	width: 100%;
-	padding-top: 100%;
-	position: relative;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
 }
 
 .logo-square {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: url(../images/logo-square@2x.png);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	transform: translate3d(0, 0, 0);
-	display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/logo-square@2x.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: translate3d(0, 0, 0);
+  display: block;
 }
 
 .background {
-	background-image: url(../images/background-v.jpg);
-	background-size: cover;
-	background-position: 50% 50%;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
+  background-image: url(../images/background-v.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
 
-	@media #{$break-point} {
-		background-image: url(../images/background-h.jpg);
-	}
+  @media #{$break-point} {
+    background-image: url(../images/background-h.jpg);
+  }
 }
 
 p {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 p:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .btn {
-	font-size: 16px;
-	font-weight: 600;
-	padding: 12px 0px 6px 0px;
-	color: #404040;
-	border-bottom: thin solid #404040;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0px 6px 0px;
+  color: #404040;
+  border-bottom: thin solid #404040;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 
-	transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .btn:hover {
-	color: #757575;
-	border-color: #b2b2b2;
+  color: #757575;
+  border-color: #b2b2b2;
 }
 
 .title {
-	font-size: 24px;
+  font-size: 24px;
 }
