@@ -47,7 +47,7 @@ body {
 }
 
 .section--header {
-  background: rgba(0, 0, 0, 0.5);
+  background: #fff;
 
   @media #{$break-point} {
     height: 300px;
@@ -80,7 +80,7 @@ body {
 }
 
 .section-content {
-  padding: 0px 40px;
+  padding: 0px 50px;
   text-align: center;
   max-width: 400px;
   margin: 0 auto;
@@ -125,19 +125,14 @@ body {
 }
 
 .background {
-  background-image: url(../images/background-v.jpg);
-  background-size: cover;
-  background-position: 50% 50%;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   display: block;
-
-  @media #{$break-point} {
-    background-image: url(../images/background-h.jpg);
-  }
+  opacity: 0.99; /* stacking context! */
+  overflow: hidden;
 }
 
 p {
