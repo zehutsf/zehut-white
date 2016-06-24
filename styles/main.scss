@@ -48,10 +48,6 @@ body {
 
 .section--header {
   background: #fff;
-
-  @media #{$break-point} {
-    height: 300px;
-  }
 }
 
 .section-outer {
