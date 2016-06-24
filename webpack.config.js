@@ -2,9 +2,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './src/scripts/index.js',
+  entry: './scripts/client.js',
   output: {
-    path: './dist/',
+    path: './build/',
     filename: 'bundle.js'
   },
   module: {
@@ -28,7 +28,7 @@ module.exports = {
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       title: 'Zehut! White Party 2016',
-      template: './src/templates/index.html'
+      template: './templates/index.html'
     })
   ],
 
