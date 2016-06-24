@@ -5,8 +5,9 @@ import Slideshow from './slideshow';
 // Initialize
 const images = [
   require('../images/background-01.jpg'),
-  require('../images/background-02.jpg'),
-  require('../images/background-03.jpg')
+  require('../images/background-04.jpg'),
+  require('../images/background-02.jpg')
+  //require('../images/background-03.jpg')
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
