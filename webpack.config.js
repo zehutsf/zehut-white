@@ -1,6 +1,13 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var styleLoader = 'style-loader!css-loader!autoprefixer-loader!sass-loader';
+if (process.env.NODE_ENV === 'production') {
+  styleLoader = ExtractTextPlugin.extract(
+    'style-loader', 'css-loader!autoprefixer-loader!sass-loader'
+  );
+}
+
 module.exports = {
   entry: [
     'babel-polyfill',
@@ -19,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.scss|.css$/,
-        loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
+        loader: styleLoader
       },
       {
         test: /\.(png|jpg)$/,
