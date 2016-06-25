@@ -1,6 +1,7 @@
 import '../styles/main';
 import loadImage from './loadImage';
 import Slideshow from './slideshow';
+import '!file!../images/og-img.jpg';
 
 // Initialize
 const images = [
