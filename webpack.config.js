@@ -11,6 +11,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   entry: [
     'babel-polyfill',
+    'whatwg-fetch',
     './scripts/client.js'
   ],
   output: {

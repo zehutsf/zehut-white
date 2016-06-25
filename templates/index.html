@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,600" rel="stylesheet">
   </head>
 
   <body>
@@ -33,7 +33,15 @@
               <p>Sunday, August 21 in the afternoon.<br/>
                 Fay Park, San Francisco</p>
               <p>
-                <a href="eventbrite.com" class="btn">Reserve your tickets</a>
+                <div class="form-container">
+                  <form id="email-form">
+                    <input name="email" class="input input--text" type="email" placeholder="E-mail address" />
+                    <input type="submit" class="input input--submit btn" value="Join the ticket waitlist"/>
+                  </form>
+                  <div class="form-success">
+                    Thank you.
+                  </div>
+                </div>
               </p>
             </div>
           </div>

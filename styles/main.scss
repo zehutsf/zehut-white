@@ -14,10 +14,24 @@ a {
   text-decoration: none;
 }
 
-body {
+@mixin font-light() {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
   font-weight: 300;
+}
+
+@mixin font-regular() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-semibold() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+body {
+  @include font-light();
+  font-size: 16px;
   background-color: #fff;
   color: #404040;
   line-height: 1.3;
@@ -141,14 +155,12 @@ p:last-child {
 
 .btn {
   font-size: 16px;
-  font-weight: 600;
-  padding: 12px 0px 6px 0px;
+  @include font-semibold();
+  padding: 12px 12px;
   color: #404040;
-  border-bottom: thin solid #404040;
+  border: thin solid #404040;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-
-  transition: all 0.4s ease-in-out;
+  transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .btn:hover {
@@ -158,4 +170,45 @@ p:last-child {
 
 .title {
   font-size: 24px;
+}
+
+.input {
+  border: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+  background: none;
+
+}
+
+.input--text {
+  @include font-light();
+  font-size: 16px;
+  border-bottom: thin solid #b2b2b2;
+  text-align: center;
+  width: 100%;
+  padding: 0px 20px 12px 20px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.input--text:focus {
+  outline: none;
+  border-bottom: thin solid #757575;
+}
+
+.form-container.success form {
+  display: none;
+}
+
+.form-container.success .form-success {
+  display: block;
+}
+
+.form-container.error .input--text {
+  border-bottom: thin solid #ff7065;
+}
+
+.form-success {
+  display: none;
 }

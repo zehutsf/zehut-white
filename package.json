@@ -29,7 +29,10 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "detect-animation-end-helper": "^0.1.0",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "whatwg-fetch": "^1.0.0"
   }
 }
