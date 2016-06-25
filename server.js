@@ -1,17 +1,6 @@
-var mysql = require('mysql');
 var express = require('express');
 var bodyParser = require('body-parser');
-
-var db = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
-
-db.connect(function(err) {
-  if (err) {
-    console.error('Database connection error: ' + err.stack);
-    return;
-  }
-
-  console.log('Database connected with id ' + db.threadId);
-});
+var getConnection = require('./getConnection');
 
 var app = express();
 app.set('port', (process.env.PORT || 5000));
@@ -29,13 +18,21 @@ app.post('/api/rsvp', function(req, res) {
     createdat: Date.now() / 1000
   };
 
-  db.query('INSERT INTO emailrsvp SET ?', info, function(err) {
+  getConnection(function(err, connection) {
     if (err) {
-      console.log('Error inserting RSVP record: ' + err);
       return res.json({error: true});
     }
 
-    return res.json({success: true});
+    connection.query('INSERT INTO emailrsvp SET ?', info, function(err) {
+      if (err) {
+        console.log('Error inserting RSVP record: ' + err);
+        res.json({error: true});
+      } else {
+        res.json({success: true});
+      }
+
+      connection.release();
+    });
   });
 });
 
