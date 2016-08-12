@@ -25,40 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // Set up form
-  const formContainer = document.querySelector('.form-container');
-  const form = document.getElementById('email-form');
-  const emailInput = document.querySelector('input[name="email"]');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const emailValue = emailInput.value;
-
-    formContainer.classList.remove('error');
-
-    if (!emailValue) {
-      formContainer.classList.add('error');
-      return;
-    }
-
-    fetch('/api/rsvp', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: emailValue
-      })
-    }).then((resp) => {
-      formContainer.classList.add('success');
-    }).catch((err) => {
-      formContainer.classList.add('error');
-    });
-  };
-
-  form.addEventListener('submit', handleSubmit);
-
 });

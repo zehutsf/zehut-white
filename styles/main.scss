@@ -156,11 +156,22 @@ p:last-child {
 .btn {
   font-size: 16px;
   @include font-semibold();
-  padding: 12px 12px;
+  padding: 8px 12px;
   color: #404040;
   border: thin solid #404040;
   text-transform: uppercase;
   transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.btn--alt {
+  color: #ffffff;
+  background: #404040;
+}
+
+.btn-block {
+  display: inline-block;
+  margin: 10px;
+  width: 200px;
 }
 
 .btn:hover {
